@@ -1,0 +1,91 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to an undefined method Ugarit\\Pulse\\Entry\|Ugarit\\Pulse\\Value\:\:aggregations\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Cannot call method chunk\(\) on array\<string, mixed\>\|Heritage\\Support\\Collection\<int, array\<string, mixed\>\>\|Heritage\\Support\\Collection\<int, Ugarit\\Pulse\\Value\>\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Method Ugarit\\Pulse\\Storage\\DatabaseStorage\:\:aggregate\(\) should return Heritage\\Support\\Collection\<int, object\{key\: string, min\?\: int, max\?\: int, sum\?\: int, avg\?\: int, count\?\: int\}\> but returns Heritage\\Support\\Collection\<int, stdClass\>\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Method Ugarit\\Pulse\\Storage\\DatabaseStorage\:\:aggregateTotal\(\) should return float\|Heritage\\Support\\Collection\<string, int\> but returns float\|Heritage\\Database\\Query\\Builder\|Heritage\\Support\\Collection\<\(int\|string\), mixed\>\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Method Ugarit\\Pulse\\Storage\\DatabaseStorage\:\:values\(\) should return Heritage\\Support\\Collection\<string, object\{timestamp\: int, key\: string, value\: string\}\> but returns Heritage\\Support\\Collection\<\(int\|string\), stdClass\>\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Parameter \#1 \$array of function array_values expects array, array\|ArrayAccess\|TReduceInitial\|TReduceReturnType given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Parameter \#1 \$expression of method Heritage\\Database\\Query\\Builder\:\:selectRaw\(\) expects literal\-string, non\-falsy\-string given\.$#'
+			identifier: argument.type
+			count: 10
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Parameter \#1 \$value of class Heritage\\Database\\Query\\Expression constructor expects TValue of float\|int\|literal\-string, non\-falsy\-string given\.$#'
+			identifier: argument.type
+			count: 14
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Parameter \#1 \$values of method Ugarit\\Pulse\\Storage\\DatabaseStorage\:\:collapseValues\(\) expects Heritage\\Support\\Collection\<int, Ugarit\\Pulse\\Value\>, Heritage\\Support\\Collection\<int, Ugarit\\Pulse\\Entry\|Ugarit\\Pulse\\Value\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Parameter \#1 \$values of method Ugarit\\Pulse\\Storage\\DatabaseStorage\:\:upsertAvg\(\) expects list\<array\{bucket\: int, period\: int, type\: string, aggregate\: string, key\: string, value\: float\|int, count\?\: int\}\>, array\<int, array\{bucket\: int, period\: int, type\: string, aggregate\: string, key\: string, value\: float\|int, count\?\: int\}\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Parameter \#1 \$values of method Ugarit\\Pulse\\Storage\\DatabaseStorage\:\:upsertCount\(\) expects list\<array\{bucket\: int, period\: int, type\: string, aggregate\: string, key\: string, value\: float\|int, count\?\: int\}\>, array\<int, array\{bucket\: int, period\: int, type\: string, aggregate\: string, key\: string, value\: float\|int, count\?\: int\}\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Parameter \#1 \$values of method Ugarit\\Pulse\\Storage\\DatabaseStorage\:\:upsertMax\(\) expects list\<array\{bucket\: int, period\: int, type\: string, aggregate\: string, key\: string, value\: float\|int, count\?\: int\}\>, array\<int, array\{bucket\: int, period\: int, type\: string, aggregate\: string, key\: string, value\: float\|int, count\?\: int\}\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Parameter \#1 \$values of method Ugarit\\Pulse\\Storage\\DatabaseStorage\:\:upsertMin\(\) expects list\<array\{bucket\: int, period\: int, type\: string, aggregate\: string, key\: string, value\: float\|int, count\?\: int\}\>, array\<int, array\{bucket\: int, period\: int, type\: string, aggregate\: string, key\: string, value\: float\|int, count\?\: int\}\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Parameter \#1 \$values of method Ugarit\\Pulse\\Storage\\DatabaseStorage\:\:upsertSum\(\) expects list\<array\{bucket\: int, period\: int, type\: string, aggregate\: string, key\: string, value\: float\|int, count\?\: int\}\>, array\<int, array\{bucket\: int, period\: int, type\: string, aggregate\: string, key\: string, value\: float\|int, count\?\: int\}\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Storage/DatabaseStorage.php
+
+		-
+			message: '#^Parameter \#2 \$direction of method Heritage\\Database\\Query\\Builder\:\:orderBy\(\) expects ''asc''\|''desc''\|SortDirection, string given\.$#'
+			identifier: argument.type
+			count: 2
+			path: src/Storage/DatabaseStorage.php

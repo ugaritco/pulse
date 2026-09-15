@@ -1,0 +1,110 @@
+{
+    "name": "ugarit/pulse",
+    "description": "Ugarit Pulse is a real-time application performance monitoring tool and dashboard for your Ugarit application.",
+    "keywords": [
+        "ugarit"
+    ],
+    "homepage": "https://github.com/ugarit/pulse",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/ugarit/pulse/issues",
+        "source": "https://github.com/ugarit/pulse"
+    },
+    "authors": [
+        {
+            "name": "Muath R Abu Ouda",
+            "email": "muathrabuouda@hotmail.com",
+            "role": "Vision Leader of Ugarit"
+        },
+        {
+            "name": "Taylor Otwell",
+            "email": "taylor@laravel.com",
+            "role": "Original Creator & Primary Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "doctrine/sql-formatter": "^1.4.1",
+        "guzzlehttp/promises": "^1.0|^2.0|^3.0",
+        "heritage/auth": "^1.00.00",
+        "heritage/cache": "^1.00.00",
+        "heritage/config": "^1.00.00",
+        "heritage/console": "^1.00.00",
+        "heritage/contracts": "^1.00.00",
+        "heritage/database": "^1.00.00",
+        "heritage/events": "^1.00.00",
+        "heritage/http": "^1.00.00",
+        "heritage/queue": "^1.00.00",
+        "heritage/redis": "^1.00.00",
+        "heritage/routing": "^1.00.00",
+        "heritage/support": "^1.00.00",
+        "heritage/view": "^1.00.00",
+        "ugarit/sentinel": "^1.00.00",
+        "league/uri": "^7.5.1",
+        "livewire/livewire": "^3.6.4|^4.0",
+        "nesbot/carbon": "^2.67|^3.0",
+        "symfony/console": "^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "guzzlehttp/guzzle": "^7.7|^8.0",
+        "mockery/mockery": "^1.0",
+        "orchestra/testbench": "^8.36|^9.15|^10.8|^11.0",
+        "pestphp/pest": "^2.0|^3.0|^4.0",
+        "pestphp/pest-plugin-ugarit": "^2.2|^3.0|^4.0",
+        "phpstan/phpstan": "^2.1.33",
+        "predis/predis": "^1.0|^2.0"
+    },
+    "conflict": {
+        "nunomaduro/collision": "<7.7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ugarit\\Pulse\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "ugarit": {
+            "providers": [
+                "Ugarit\\Pulse\\PulseServiceProvider"
+            ],
+            "aliases": {
+                "Pulse": "Ugarit\\Pulse\\Facades\\Pulse"
+            }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "audit": {
+            "block-insecure": false
+        },
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": "@prepare",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "@build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "lint": [
+            "@php vendor/bin/phpstan analyse"
+        ],
+        "test": [
+            "@php vendor/bin/pest"
+        ]
+    },
+    "version": "1.00.00"
+}
